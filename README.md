@@ -122,3 +122,10 @@ The `violence-detection-vionet` project is organized with the following top-leve
 - Enhance performance in low-light surveillance
 - Train on multiple types of violence scenarios
 - Optimize for Jetson Nano / Raspberry Pi
+
+## References
+
+1. Studd, N.B., Terence, S., Immaculate, J. and Ewards, V., 2024, March. Violence Detection Using Convlstm and LRCN. In 2024 10th International Conference on Advanced Computing and Communication Systems (ICACCS) (Vol. 1, pp. 1635-1639). IEEE.
+2. Bagga, N., Singh, G., Balusamy, B. and Singh, A.S., 2022, April. Violence detection in real life videos using convolutional neural network. In 2022 2nd International Conference on Advance Computing and Innovative Technologies in Engineering (ICACITE) (pp. 872-876). IEEE.
+3. Traoré, A. and Akhloufi, M.A., 2020, October. Violence detection in videos using deep recurrent and convolutional neural networks. In 2020 IEEE international conference on systems, man, and cybernetics (SMC) (pp. 154-159). IEEE.
+
