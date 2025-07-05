@@ -1,6 +1,6 @@
 import os
 import cv2
-import numoy as np
+import numpy as np
 
 
 def load_data(data_dir, seq_len=20, img_size=64):
