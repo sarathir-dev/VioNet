@@ -1,17 +1,23 @@
-import numpy as np
-import torch
-from sklearn.model_selection import train_test_split
+import os
+import cv2
+import numoy as np
 
 
-def load_data(features_path, labels_path):
-    X = np.load(features_path)
-    y = np.load(labels_path)
-    return X, y
-
-
-def split_data(X, y, test_size=0.2):
-    return train_test_split(X, y, test_size=test_size, random_state=42)
-
-
-def to_tensor(X, y):
-    return torch.tensor(X, dtype=torch.float32), torch.tensor(y, dtype=torch.long)
+def load_data(data_dir, seq_len=20, img_size=64):
+    X, y = [], []
+    for label in ['Violence', 'NonViolence']:
+        folder = os.path.join(data_dir, label)
+        for video in os.listdir(folder):
+            cap = cv2.VideoCapture(os.path.join(folder, video))
+            frames = []
+            while len(frames) < seq_len and cap.isOpened():
+                ret, frame = cap.read()
+                if not ret:
+                    break
+                frame = cv2.resize(frame, (img_size, img_size)) / 255.0
+                frames.append(frame)
+            cap.release()
+            if len(frames) == seq_len:
+                X.append(frames)
+                y.append(1 if label == 'Violence' else 0)
+    return np.array(X), np.array(y)
