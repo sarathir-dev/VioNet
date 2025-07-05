@@ -102,7 +102,7 @@ The `violence-detection-vionet` project is organized with the following top-leve
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/violence-detection-vionet.git
+   git clone https://github.com/sarathir-dev/VioNet.git
    cd violence-detection-vionet
    ```
 2. Install requirements:
