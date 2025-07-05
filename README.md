@@ -91,3 +91,34 @@ VioNet is a hybrid network that processes 20 RGB video frames of size 64×64 usi
 
 > VioNet demonstrates robustness even in blurry or occluded scenes.
 
+## Folder Structure
+
+The `violence-detection-vionet` project is organized with the following top-level directories: `models` for the VioNet architecture, `utils` for data loaders, trainers, evaluators, and visualizers, `data` to store input videos or extracted frames, `assets` for architecture diagrams and sample outputs, and `plots` for evaluation plots.
+
+
+---
+
+## Running the Project
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/violence-detection-vionet.git
+   cd violence-detection-vionet
+   ```
+2. Install requirements:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Train the model:
+    ```bash
+    python main.py
+    ```
+4. View plots:
+    ```bash
+    Open plots/ folder for training curves, confusion matrix, and ROC.
+    ```
+
+## Future Work
+- Enhance performance in low-light surveillance
+- Train on multiple types of violence scenarios
+- Optimize for Jetson Nano / Raspberry Pi
